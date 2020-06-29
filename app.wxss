@@ -1,0 +1,12 @@
+/**app.wxss**/
+page{
+  padding: 0rpx;
+  margin: 0rpx;
+  background-color:#f6f6f6;
+}
+.box{
+  margin: 0rpx 20rpx;
+}
+.theme{
+  background-color:rgba(254, 201, 99, 1)
+}
