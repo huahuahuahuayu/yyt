@@ -1,0 +1,146 @@
+<!--pages/goodsdetail/goodsdetail.wxml-->
+<view class="container">
+	<!-- 导航部分 -->
+	<view class="dw">
+		<view class="nav">
+			<view class='infos {{currentIndex===0? "onc" : ""}}' data-index="{{one}}" bindtap='titleClick'>基本信息</view>
+			<view class='conment {{currentIndex===1? "onc" : ""}}' data-index="{{two}}" bindtap="titleClick">产品评论</view>
+		</view>
+	</view>
+	<!-- 内容部分 -->
+	<view class="content">
+		<view class="product-detail" wx:if="{{currentIndex===0}}">
+			<swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+				<block wx:for="{{pics}}" wx:for-index="index">
+					<swiper-item>
+						<image src="{{item.url}}" class="slide-image" mode="aspectFill" />
+					</swiper-item>
+				</block>
+			</swiper>
+
+			<view class="price">
+				<!-- <image src="../../images/bg.png"></image> -->
+				<view class="leftprice">
+					<view class="nowprice">
+						<text class="fh">￥</text>
+						<text class="num nownum">{{13.8}}</text>
+					</view>
+					<view class="oldprice">
+						<text class="fh">￥</text>
+						<text class="num oldnum">{{13.8}}</text>
+					</view>
+				</view>
+
+				<view class="time">
+					<text class="end">开始时间</text>
+					<text class="etime">14：00：00</text>
+
+
+				</view>
+			</view>
+
+			<view class="detail">
+				<view class="title">手工水饺</view>
+				<view class="pay">
+					<image src="../../images/fh.png"></image>
+					<text>	现在下单，预计明日可配送</text>
+
+				</view>
+				<view class="nums">
+					<text class="saled">已售<text class="num">{{20}}</text>件,还剩已售<text class="num">{{30}}</text>件</text>
+				</view>
+			</view>
+			<!-- 底部 -->
+			<view class="last">
+				<view class="bottom">
+					<view class="left">
+						<view class="dp row">
+							<image src="../../images/dp.png"></image>
+							<text>店铺</text>
+						</view>
+						<view class="gwc row">
+							<image src="../../images/gwcx.png"></image>
+							<text>购物车</text>
+							<view class="dot">1</view>
+						</view>
+						<view class="fx row">
+							<image src="../../images/fx.png"></image>
+							<text>分享</text>
+						</view>
+					</view>
+					<view class="right">
+						<view class="buy join" bindtap="joincart" data-index="{{join}}">加入购物车</view>
+						<view class="buy now" bindtap="joincart" data-index="{{buy}}">立即购买</view>
+					</view>
+					<!-- 底部弹出层 -->
+					<van-popup show="{{ show }}" position="bottom" overlay="{{ true }}" bind:close="onClose">
+						<view class="choose">
+							<view class="info">
+								<view class="picture">
+									<image src="../../images/head.jpeg"></image>
+								</view>
+								<view class="info-detail">
+									<text class="info-title">麻辣小龙虾500g</text>
+									<text class="info-price">￥25.00</text>
+								</view>
+							</view>
+							<view class="cs">
+								<text>商品规格</text>
+								<view>500g</view>
+							</view>
+							<view class="gm">
+								<text>购买数量</text>
+								<view class="sl">
+									<view class="sl-left" bindtap="deduct">-</view>
+									<view class="sl-middle">{{num}}</view>
+									<view class="sl-right" bindtap="add">+</view>
+								</view>
+							</view>
+							<view class="ok">
+								<view bindtap="join" wx:if="{{currentId===0}}">加入购物车</view>
+								<navigator url="../../pages/orderok/orderok">	<view class="buynow" bindtap="now" wx:if="{{currentId===1}}">确认购买</view></navigator>
+							
+							</view>
+						</view>
+
+					</van-popup>
+					<toast hidden="{{hiddenToast}}" duration="1000" bindchange="toastHidden">不能再减了</toast>
+				</view>
+			</view>
+		</view>
+		<!-- 评论模块 -->
+		<view class="pinglun" wx:if="{{currentIndex===1}}">22</view>
+	</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>

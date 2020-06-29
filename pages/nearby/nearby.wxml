@@ -1,0 +1,15 @@
+<!--pages/nearby/nearby.wxml-->
+<image mode="widthfix" class="bannar" src="../../images/yq.png"></image>
+<view class="box">
+	<view class="address">
+		<view class="now-address">当前地址</view>
+		<view class="revise">
+			<view class="images">
+				<image src="../../images/dz.png"></image>
+			</view>
+			<view class="add-detail">武汉市洪山区</view>
+			<view class="revise-add">修改></view>
+		</view>
+	</view>
+
+</view>

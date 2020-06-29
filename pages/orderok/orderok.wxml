@@ -1,0 +1,65 @@
+<!--pages/orderok/orderok.wxml-->
+<view class="box">
+	<view class="tzinfo">
+		<!-- <image class="tzhead" src="../../images/tztx.png"></image> -->
+		<text class="name">团长：小李</text>
+		<view class="sddress">
+			<!-- <image mode="widthfix" src="../../images/add.png"></image> -->
+			<text>自提点：北京市东城区黄埔街道56号锦绣龙城12345678911111</text>
+		</view>
+
+	</view>
+	<view class="userinfo">
+		<view class="name">购买人：张三李四</view>
+		<view class="tel">手机号：123456</view>
+	</view>
+	<image class="bg" src="../../images/orderok.png"></image>
+	<view class="card">
+		<view class="head">
+			<image src="../../images/head.jpeg"></image>
+		</view>
+		<view class="info">
+			<text class="title">红色限量版套装礼盒红色限量版套装礼 盒红色限量版套装礼盒</text>
+			<text class="descrip">描述信息</text>
+			<view class="price">
+				<text>￥2.00</text>
+				<text class="num">X2</text>
+			</view>
+		</view>
+	</view>
+	<view class="peisong">
+		<view class="row">
+			<text></text>
+			<text></text>
+		</view>
+		<view class="row">
+			<text>配送方式</text>
+			<text>自提</text>
+		</view>
+		<view class="row">
+			<text>优惠券</text>
+			<text>暂无可用></text>
+		</view>
+		<view class="bz">
+			<text>备注</text>
+			<input placeholder="选填：请留下您的要求"></input>
+		</view>
+		<view class="counts">
+			<text>共1件商品</text>
+			<view class="xj">小计： </view>
+			<view class="num">￥15.00</view>
+		</view>
+	</view>
+  	<!-- <view class="bottom">
+			<view class="count">
+				<text>合计：</text>
+				<view class="count-price">￥20.8</view>
+			</view>
+      <view class="ok">确认支付</view>
+		</view> -->
+    <van-submit-bar
+  price="{{ 3050 }}"
+  button-text="提交订单"
+  bind:submit="onSubmit"
+/>
+</view>

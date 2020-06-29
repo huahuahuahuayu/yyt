@@ -1,0 +1,24 @@
+/* pages/nearby/nearby.wxss */
+.bannar{
+  width:750rpx;
+height:216rpx;
+}
+.address image{
+  width:28rpx;
+height:32rpx;
+}
+.revise{
+  display: flex;
+  height:100rpx;
+  line-height: 100rpx;
+}
+.now-address{
+  color: tomato;
+}
+.add-detail{
+  margin-left: 17rpx;
+}
+.now-address{
+  height:100rpx;
+  line-height: 100rpx;
+}

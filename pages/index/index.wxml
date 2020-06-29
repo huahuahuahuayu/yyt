@@ -1,0 +1,181 @@
+<!--index.wxml-->
+<view class="container">
+
+	<view class="topbar" style="padding-top:{{statusBarHeight}}px">
+		<view class="arrow-box row">
+			<image mode="widthFix" src="../../images/logo.png"></image>
+		</view>
+		<view class="input-box row">
+			<input placeholder="搜索商品" />
+		</view>
+	</view>
+	<view class="box">
+		<view class="tz">
+			<view class="header">
+				<view class="head">
+					<image src="../../images/head.jpeg"></image>
+				</view>
+				<view class="info">
+					<view class="name">张三</view>
+					<view class="add">湖北省武汉市</view>
+				</view>
+			</view>
+			<view class="right">
+				<view class="ewm rightrow">
+					<image src="../../images/sm.png"></image>
+					<text>扫码加群</text>
+				</view>
+				<view class="fx rightrow">
+					<image src="../../images/sm.png"></image>
+					<text>分享</text>
+				</view>
+				<navigator url="../../pages/nearby/nearby">
+				<view class="fj rightrow">
+					<image src="../../images/sm.png"></image>
+					<text>附近团长</text>
+				</view>
+				</navigator>
+			</view>
+		</view>
+	</view>
+	<view class="box">
+		<view class="swip">
+			<view class="page-section page-section-spacing swiper">
+				<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="white" indicator-active-color="#EFB84E">
+					<block wx:for="{{imgs}}" wx:key="*this">
+						<swiper-item>
+							<image src="{{item.url}}"></image>
+						</swiper-item>
+					</block>
+				</swiper>
+			</view>
+		</view>
+	</view>
+	<view class="box">
+		<view class="sales">
+			<view class="title">
+				<image src="../../images/time.png"></image>
+				<text class="xs">限时秒杀</text>
+				<view class="sx"> |</view>
+				<view class="time">
+					<text class="num">13:00</text>
+					<text class="jj">即将开始</text>
+				</view>
+			</view>
+			<navigator url="../../pages/goodsdetail/goodsdetail">
+			<view class="pic">
+				<image  src="{{mspic}}"></image>
+				<view class="click">点击查看详情</view>
+			</view>
+			</navigator>
+			<view class="detail">
+				<view class="left-detail">
+					<view class="dtitle">{{detailname}}</view>
+					<view class="crd">次日达</view>
+					<view class="price">
+						<view class="mprice">
+							<text class="mfh">￥</text>
+							{{mprice}}
+						</view>
+						<view class="yprice">
+							<text class="yfh">￥</text>
+							{{yprice}}</view>
+					</view>
+				</view>
+				<view class="right-detail">
+					<text class="rqnum">{{rqnum}}</text>
+					<text class="gray">人气值</text>
+					<text class="sy gray">剩余{{synum}}份</text>
+					<text class="joincart">加入购物车</text>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="box">
+		<view class="todaytitle">
+			<view class="tt">
+				<view>
+					{{ttitle}}
+				</view>
+				<view class="line">
+				</view>
+			</view>
+			<view class="zs">
+				<view class="zsone zsdetail">
+					<view class="one">
+						<image src="../../images/one.jpg"></image>
+						<view class="tclick">点击查看详情</view>
+					</view>
+					<view class="two">
+						<view class="thtitle">{{twotitle}}</view>
+						<view class="thprice">
+							{{thtprice}}
+						</view>
+
+					</view>
+					<view class="thlast">
+						<view class="price">
+							<view class="mprice">
+								<text class="mfh">￥</text>
+								{{thprice}}
+
+							</view>
+							<!-- <view class="yprice">
+								<text class="yfh">￥</text>
+								{{thyprice}}</view> -->
+						</view>
+						<view class="thjg">
+							<view class="theme now">马上抢</view>
+						</view>
+					</view>
+				</view>
+				<view class="zstwo zsdetail"></view>
+			</view>
+		</view>
+
+
+	</view>
+
+	<view class="box fl">
+		<view class="page-section">
+			<view class="page-section-spacing">
+				<scroll-view class="scroll-view_H {{scrollTop>876 ? 'topnavFixed' : ''}}" scroll-x="true" bindscroll="scroll" style="width: 100%">
+					<view class='scroll-view-item_H demo-text-1  {{index===currentIndex? "tabBorer" : ""}}' data-index="{{index}}" wx:for="{{ topMenuList}}" wx:key="*this" bindtap='titleClick' >{{item.name}}</view>
+				</scroll-view>
+				<view class="bottomcontent" wx:for="{{ bottomContent}}" wx:if="{{index===currentIndex}}">
+					<image class="bottomhead" mode="widthFix" src="{{item.img}}"></image>
+					<view class="middle">
+						<view class="thtitle">{{item.title}}</view>
+						<view class="thprice">特惠价</view>
+						<view class="thlast">
+							<view class="price">
+								<view class="mprice">
+									<text class="mfh">￥</text>
+									{{thprice}}
+
+								</view>
+								<view class="yprice">
+									<text class="yfh">￥</text>
+									{{thyprice}}</view>
+							</view>
+
+						</view>
+
+					</view>
+					<view class="bottomlast">
+						<view class="yq">
+							已抢
+							<text>20</text>
+							份
+						</view>
+						<view class="now">
+							马上抢
+						</view>
+					</view>
+				</view>
+				
+
+			</view>
+		</view>
+	</view>
+</view>
