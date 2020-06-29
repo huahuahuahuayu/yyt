@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/zhaoshang/zhaoshang",
+    "pages/carts/carts",
+    "pages/my/my",
+    "pages/goodsdetail/goodsdetail",
+    "pages/orderok/orderok",
+    "pages/nearby/nearby"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "艳阳享选",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#fec963",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/index-s.png",
+        "selectedIconPath": "images/index.png"
+      },
+      {
+        "pagePath": "pages/zhaoshang/zhaoshang",
+        "text": "招商入驻",
+        "iconPath": "images/zhaoshango.png",
+        "selectedIconPath": "images/zhaoshang.png"
+      },
+      {
+        "pagePath": "pages/carts/carts",
+        "text": "购物车",
+        "iconPath": "images/gwco.png",
+        "selectedIconPath": "images/gwc.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/myo.png",
+        "selectedIconPath": "images/my.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
